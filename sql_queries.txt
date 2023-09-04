@@ -1,34 +1,34 @@
 CREATE DATABASE employee;
 
 
-CREATE TABLE employee(
-  id int, 
-  first_name varchar(30), 
-  last_name varchar(30), 
-  age int, 
-  mobile_number varchar(17), 
-  address varchar(100), 
-  primary key(id)
+CREATE TABLE employee (
+  id INT AUTO_INCREMENT, 
+  first_name VARCHAR(30), 
+  last_name VARCHAR(30), 
+  age INT, 
+  mobile_number VARCHAR(17), 
+  address VARCHAR(100), 
+  PRIMARY KEY(id)
 );
 
 
 /*--------------------------------------------------------------------------------*/
 
 
-CREATE TABLE employee_salary(
-  fk_employee_id int, 
-  salary int, 
-  date date, 
-  primary key(fk_employee_id), 
-  foreign key(fk_employee_id) references employee(id)
+CREATE TABLE employee_salary (
+  fk_employee_id INT, 
+  salary INT, 
+  date DATE, 
+  PRIMARY KEY(fk_employee_id), 
+  FOREIGN KEY(fk_employee_id) REFERENCES employee(id)
 );
 
 
 /*--------------------------------------------------------------------------------*/
 
 
-CREATE TABLE hobby(
-  id int, 
+CREATE TABLE hobby (
+  id INT AUTO_INCREMENT, 
   name varchar(30), 
   primary key(id)
 );
@@ -37,11 +37,12 @@ CREATE TABLE hobby(
 /*--------------------------------------------------------------------------------*/
 
 
-CREATE TABLE employee_hobby(
-  id int, 
-  fk_employee_id int, 
-  fk_hobby_id int, 
-  primary key(id), 
-  foreign key(fk_employee_id) references employee(id), 
-  foreign key(fk_hobby_id) references hobby(id)
+CREATE TABLE employee_hobby (
+  id INT, 
+  fk_employee_id INT AUTO_INCREMENT, 
+  fk_hobby_id INT, 
+  PRIMARY KEY(id), 
+  FOREIGN KEY(fk_employee_id) REFERENCES employee(id), 
+  FOREIGN KEY(fk_hobby_id) REFERENCES hobby(id)
 );
+
