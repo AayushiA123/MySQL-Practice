@@ -39,7 +39,7 @@ CREATE TABLE hobby (
 
 CREATE TABLE employee_hobby (
   id INT AUTO_INCREMENT, 
-  fk_employee_id INT AUTO_INCREMENT, 
+  fk_employee_id INT, 
   fk_hobby_id INT, 
   PRIMARY KEY(id), 
   FOREIGN KEY(fk_employee_id) REFERENCES employee(id), 
