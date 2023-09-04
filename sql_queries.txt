@@ -1,0 +1,47 @@
+CREATE DATABASE employee;
+
+
+CREATE TABLE employee(
+  id int, 
+  first_name varchar(30), 
+  last_name varchar(30), 
+  age iNT, 
+  mobile_number varchar(17), 
+  address varchar(100), 
+  primary key(id)
+);
+
+
+/*--------------------------------------------------------------------------------*/
+
+
+CREATE TABLE employee_salary(
+  fk_employee_id int, 
+  salary int, 
+  date date, 
+  primary key(fk_employee_id), 
+  foreign key(fk_employee_id) references employee(id)
+);
+
+
+/*--------------------------------------------------------------------------------*/
+
+
+CREATE TABLE hobby(
+  id int, 
+  name varchar(30), 
+  primary key(id)
+);
+
+
+/*--------------------------------------------------------------------------------*/
+
+
+CREATE TABLE employee_hobby(
+  id int, 
+  fk_employee_id int, 
+  fk_hobby_id int, 
+  primary key(id), 
+  foreign key(fk_employee_id) references employee(id), 
+  foreign key(fk_hobby_id) references hobby(id)
+);
