@@ -16,6 +16,7 @@ CREATE TABLE employee (
 
 
 CREATE TABLE employee_salary (
+  id INT AUTO_INCREMENT, 
   fk_employee_id INT AUTO_INCREMENT, 
   salary INT, 
   date DATE, 
