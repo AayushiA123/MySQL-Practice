@@ -3,11 +3,11 @@ CREATE DATABASE employee;
 
 CREATE TABLE employee (
   id INT AUTO_INCREMENT, 
-  first_name VARCHAR(30), 
-  last_name VARCHAR(30), 
+  first_name VARCHAR (30), 
+  last_name VARCHAR (30), 
   age INT, 
-  mobile_number VARCHAR(17), 
-  address VARCHAR(100), 
+  mobile_number VARCHAR (17), 
+  address VARCHAR (100), 
   PRIMARY KEY (id)
 );
 
@@ -20,7 +20,7 @@ CREATE TABLE employee_salary (
   salary INT, 
   date DATE, 
   PRIMARY KEY (fk_employee_id), 
-  FOREIGN KEY (fk_employee_id) REFERENCES employee(id)
+  FOREIGN KEY (fk_employee_id) REFERENCES employee (id)
 );
 
 
@@ -29,7 +29,7 @@ CREATE TABLE employee_salary (
 
 CREATE TABLE hobby (
   id INT AUTO_INCREMENT, 
-  name VARCHAR(30), 
+  name VARCHAR (30), 
   PRIMARY KEY (id)
 );
 
@@ -42,7 +42,7 @@ CREATE TABLE employee_hobby (
   fk_employee_id INT, 
   fk_hobby_id INT, 
   PRIMARY KEY (id), 
-  FOREIGN KEY (fk_employee_id) REFERENCES employee(id), 
-  FOREIGN KEY (fk_hobby_id) REFERENCES hobby(id)
+  FOREIGN KEY (fk_employee_id) REFERENCES employee (id), 
+  FOREIGN KEY (fk_hobby_id) REFERENCES hobby (id)
 );
 
