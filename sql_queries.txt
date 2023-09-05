@@ -149,3 +149,27 @@ DELETE FROM employee_salary
 WHERE id = 3;
 
 /*--------------------------------------------------------------------------------*/
+
+TRUNCATE TABLE employee_hobby;
+
+TRUNCATE TABLE employee_salary;
+
+/*--------------------------------------------------------------------------------*/
+
+SELECT *
+FROM employee
+INNER JOIN employee_hobby
+  ON employee.id = employee_hobby.id
+INNER JOIN employee_salary
+  ON employee.id = employee_salary.id
+INNER JOIN hobby
+  ON employee.id = hobby.id;
+
+/*--------------------------------------------------------------------------------*/
+
+SELECT name
+FROM employee
+INNER JOIN hobby
+ ON employee.id = hobby.id;
+
+/*--------------------------------------------------------------------------------*/
