@@ -177,7 +177,8 @@ first_name,
 salary
 FROM employee
 INNER JOIN employee_salary
-ON employee.id = employee_salary.id;
+ON 
+employee.id = employee_salary.id;
 
 
 -- Select queries to get employee name, hobby and salary: 
