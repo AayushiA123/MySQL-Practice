@@ -61,7 +61,6 @@ VALUES (3, "Shubham", "Gupta", 29, 9977447777, "Jabalpur");
 
 /*--------------------------------------------------------------------------------*/
 
-
 INSERT INTO hobby (id, name)
 VALUES (1, "Cricket");
 
@@ -74,6 +73,29 @@ VALUES (3, "Reading");
 INSERT INTO hobby (id, name)
 VALUES (4, "Gardening");
 
+/*--------------------------------------------------------------------------------*/
+
+INSERT INTO employee_hobby (id, fk_employee_id, fk_hobby_id)
+VALUES (1, 1, 1);
+
+INSERT INTO employee_hobby (id, fk_employee_id, fk_hobby_id)
+VALUES (2, 2, 2);
+
+INSERT INTO employee_hobby (id, fk_employee_id, fk_hobby_id)
+VALUES (3, 3, 3);
+
+INSERT INTO employee_hobby (id, fk_employee_id, fk_hobby_id)
+VALUES (4, 4, 4);
 
 /*--------------------------------------------------------------------------------*/
 
+INSERT INTO employee_salary (id, fk_employee_id, salary, date)
+VALUES (1, 1, 2000, "2003-01-26");
+
+INSERT INTO employee_salary (fk_employee_id, salary, date)
+VALUES (2, 2006, "2009-05-23");
+
+INSERT INTO employee_salary (fk_employee_id, salary, date)
+VALUES (3, 2056, "2089-05-23");
+
+/*--------------------------------------------------------------------------------*/
