@@ -161,35 +161,22 @@ FROM employee_hobby;
 
 -- Select queries to get employee name and hobby name: 
 
-SELECT
-first_name,
-name
+SELECT first_name,name
 FROM employee
-INNER JOIN hobby
-ON 
-employee.id = hobby.id;
+INNER JOIN hobby ON employee.id = hobby.id;
 
 
 -- Select queries to get employee name and salary: 
 
-SELECT
-first_name,
-salary
+SELECT first_name, salary
 FROM employee
-INNER JOIN employee_salary
-ON 
-employee.id = employee_salary.id;
+INNER JOIN employee_salary ON employee.id = employee_salary.id;
 
 
 -- Select queries to get employee name, hobby and salary: 
 
-SELECT
-first_name,
-name,
-salary
+SELECT first_name,name,salary
 FROM employee
-INNER JOIN hobby
-ON employee.id = hobby.id
-INNER JOIN employee_salary
-ON employee.id = employee_salary.id;
+INNER JOIN hobby ON employee.id = hobby.id
+INNER JOIN employee_salary ON employee.id = employee_salary.id;
 
