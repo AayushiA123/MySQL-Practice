@@ -168,8 +168,37 @@ INNER JOIN hobby
 /*--------------------------------------------------------------------------------*/
 
 SELECT name
-FROM employee
-INNER JOIN hobby
- ON employee.id = hobby.id;
+FROM employee INNER JOIN hobby
+ON 
+employee.id = hobby.id;
 
 /*--------------------------------------------------------------------------------*/
+
+SELECT
+first_name,
+name
+FROM employee
+INNER JOIN hobby
+ON 
+employee.id = hobby.id;
+
+/*--------------------------------------------------------------------------------*/
+
+SELECT
+first_name,
+salary
+FROM employee
+INNER JOIN employee_salary
+ON employee.id = employee_salary.id;
+
+
+/*--------------------------------------------------------------------------------*/
+
+SELECT
+first_name
+FROM employee
+WHERE id = (SELECT
+name
+FROM hobby
+WHERE id = 1);
+
