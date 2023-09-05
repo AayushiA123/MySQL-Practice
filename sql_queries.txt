@@ -1,5 +1,6 @@
 CREATE DATABASE employee;
 
+
 -- Create table employee, employee_hobby, hobby, employee_salary:
 
 CREATE TABLE employee (
