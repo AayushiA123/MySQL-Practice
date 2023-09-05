@@ -177,8 +177,13 @@ INNER JOIN employee_salary ON employee.id = employee_salary.id;
 
 -- Select queries to get employee name, hobby and salary: 
 
-SELECT first_name,name,salary
-FROM employee
-INNER JOIN hobby ON employee.id = hobby.id
-INNER JOIN employee_salary ON employee.id = employee_salary.id;
-
+SELECT first_name, salary,
+(SELECT GROUP_CONCAT(name)
+FROM hobby
+WHERE hobby.id = employee_hobby.fk_hobby_id)
+AS hobby_name
+FROM employee_hobby
+INNER JOIN employee
+ON employee.id = employee_hobby.fk_employee_id
+INNER JOIN employee_salary
+ON employee_salary.fk_employee_id = employee.id;
