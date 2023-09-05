@@ -37,7 +37,6 @@ CREATE TABLE hobby (
 
 /*--------------------------------------------------------------------------------*/
 
-
 CREATE TABLE employee_hobby (
   id INT AUTO_INCREMENT, 
   fk_employee_id INT, 
@@ -49,69 +48,32 @@ CREATE TABLE employee_hobby (
 
 /*--------------------------------------------------------------------------------*/
 
-INSERT INTO employee
-            (id,
-             first_name,
-             last_name,
-             age,
-             mobile_number,
-             address)
-VALUES     (1,
-            "aayushi",
-            "agrawal",
-            21,
-            9300113777,
-            "ahmedabad"); 
+INSERT INTO employee (id, first_name, last_name, age, mobile_number, address)
+VALUES (1, "Aayushi", "Agrawal", 21, 9300113777, "Ahmedabad");
 
+
+INSERT INTO employee (id, first_name, last_name, age, mobile_number, address)
+VALUES (2, "Srashti", "Agrawal", 25, 9345454377, "Bhopal");
+
+
+INSERT INTO employee (id, first_name, last_name, age, mobile_number, address)
+VALUES (3, "Shubham", "Gupta", 29, 9977447777, "Jabalpur");
 
 /*--------------------------------------------------------------------------------*/
 
 
-INSERT INTO employee
-            (id,
-             first_name,
-             last_name,
-             age,
-             mobile_number,
-             address)
-VALUES     (2,
-            "srashti",
-            "agrawal",
-            25,
-            9345454377,
-            "bhopal"); 
+INSERT INTO hobby (id, name)
+VALUES (1, "Cricket");
+
+INSERT INTO hobby (id, name)
+VALUES (2, "Reading");
+
+INSERT INTO hobby (id, name)
+VALUES (3, "Reading");
+
+INSERT INTO hobby (id, name)
+VALUES (4, "Gardening");
+
 
 /*--------------------------------------------------------------------------------*/
 
-
-INSERT INTO employee
-            (id,
-             first_name,
-             last_name,
-             age,
-             mobile_number,
-             address)
-VALUES     (3,
-            "shubham",
-            "gupta",
-            29,
-            9977447777,
-            "jabalpur"); 
-
-/*--------------------------------------------------------------------------------*/
-
-
-INSERT INTO hobby
-            (id,
-             NAME)
-VALUES     (1,
-            "cricket"); 
-
-/*--------------------------------------------------------------------------------*/
-
-
-INSERT INTO hobby
-            (id,
-             NAME)
-VALUES     (2,
-            "reading"); 
