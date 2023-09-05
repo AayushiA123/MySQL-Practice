@@ -47,3 +47,71 @@ CREATE TABLE employee_hobby (
   FOREIGN KEY (fk_hobby_id) REFERENCES hobby (id)
 );
 
+/*--------------------------------------------------------------------------------*/
+
+INSERT INTO employee
+            (id,
+             first_name,
+             last_name,
+             age,
+             mobile_number,
+             address)
+VALUES     (1,
+            "aayushi",
+            "agrawal",
+            21,
+            9300113777,
+            "ahmedabad"); 
+
+
+/*--------------------------------------------------------------------------------*/
+
+
+INSERT INTO employee
+            (id,
+             first_name,
+             last_name,
+             age,
+             mobile_number,
+             address)
+VALUES     (2,
+            "srashti",
+            "agrawal",
+            25,
+            9345454377,
+            "bhopal"); 
+
+/*--------------------------------------------------------------------------------*/
+
+
+INSERT INTO employee
+            (id,
+             first_name,
+             last_name,
+             age,
+             mobile_number,
+             address)
+VALUES     (3,
+            "shubham",
+            "gupta",
+            29,
+            9977447777,
+            "jabalpur"); 
+
+/*--------------------------------------------------------------------------------*/
+
+
+INSERT INTO hobby
+            (id,
+             NAME)
+VALUES     (1,
+            "cricket"); 
+
+/*--------------------------------------------------------------------------------*/
+
+
+INSERT INTO hobby
+            (id,
+             NAME)
+VALUES     (2,
+            "reading"); 
