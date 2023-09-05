@@ -162,7 +162,7 @@ FROM employee_hobby;
 -- Select queries to get employee name and hobby name: 
 
 SELECT concat(first_name, '', last_name) 
-AS name
+AS employee_name
 FROM employee
 UNION
 SELECT name
