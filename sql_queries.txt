@@ -179,13 +179,4 @@ INNER JOIN employee_salary
 ON employee.id = employee_salary.id;
 
 
-/*--------------------------------------------------------------------------------*/
-
-SELECT
-first_name
-FROM employee
-WHERE id = (SELECT
-name
-FROM hobby
-WHERE id = 1);
 
