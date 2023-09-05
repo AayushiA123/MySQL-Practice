@@ -187,4 +187,5 @@ FROM employee_hobby
 INNER JOIN employee
 ON employee.id = employee_hobby.fk_employee_id
 INNER JOIN employee_salary
-ON employee_salary.fk_employee_id = employee.id;
+ON employee_salary.fk_employee_id = employee.id
+GROUP BY employee_hobby.fk_employee_id;
