@@ -177,15 +177,16 @@ INNER JOIN employee_salary ON employee.id = employee_salary.id;
 
 -- Select queries to get employee name, hobby and salary: 
 
-SELECT first_name,sum(salary),
-(SELECT
-CONCAT(name, ' , ', name)
+SELECT first_name,
+SUM(employee_salary.salary) AS total_salary,
+(SELECT 
+GROUP_CONCAT(hobby.NAME ORDER BY hobby.NAME ASC SEPARATOR ', ')
 FROM hobby
-WHERE hobby.id = employee_hobby.fk_hobby_id)
-AS hobby_name
-FROM employee_hobby
-INNER JOIN employee
-ON employee.id = employee_hobby.fk_employee_id
-INNER JOIN employee_salary
-ON employee_salary.fk_employee_id = employee.id
-GROUP BY employee_hobby.fk_employee_id;
+JOIN employee_hobby
+ON hobby.id = employee_hobby.fk_hobby_id
+WHERE employee_hobby.fk_employee_id = employee.id)
+AS hobby_names
+FROM employee
+LEFT JOIN employee_salary
+ON employee.id = employee_salary.fk_employee_id
+GROUP BY employee.id;
