@@ -172,7 +172,7 @@ FROM hobby;
 
 SELECT concat(first_name, ' ', last_name) AS employee_name, salary
 FROM employee e
-INNER JOIN employee_salary es ON e.id = es.id;
+INNER JOIN employee_salary es ON e.id = es.fk_employee_id;
 
 
 -- Select queries to get employee name, hobby and salary: 
