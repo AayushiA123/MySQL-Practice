@@ -180,7 +180,7 @@ INNER JOIN employee_salary ON employee.id = employee_salary.id;
 SELECT first_name,
 SUM(employee_salary.salary) AS total_salary,
 (SELECT 
-GROUP_CONCAT(hobby.NAME ORDER BY hobby.NAME ASC SEPARATOR ', ')
+GROUP_CONCAT(hobby.name ORDER BY hobby.name ASC SEPARATOR ', ')
 FROM hobby
 JOIN employee_hobby
 ON hobby.id = employee_hobby.fk_hobby_id
