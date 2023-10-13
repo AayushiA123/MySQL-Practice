@@ -1,0 +1,28 @@
+MYSQL Questions-
+
+Create an “employee” database and 4 tables (hobby, employee,
+employee_salary, employee_hobby).
+1. hobby: id, name
+2. employee: id, first_name, last_name, age, mobile_number, address
+3. employee_salary: id, foreign key of employee, salary, date
+4. employee_hobby: id, foreign key of the employee, foreign key of hobby.
+
+
+- Insert multiple data in all tables.
+
+- Update data of all tables.
+
+- Delete 2 records of all tables.
+
+- Truncate all tables.
+
+- Create a separate select queries to get a hobby, employee, employee_salary,
+employee_hobby.
+
+- Create a select single query to get all employee name, all hobby_name in
+single column.
+
+- Create a select query to get employee name, his/her employee_salary.
+
+- Create a select query to get employee name, total salary of employee, hobby
+name(comma-separated - you need to use subquery for hobby name).
